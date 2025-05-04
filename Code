@@ -1,0 +1,24 @@
+//chp 41 Typealias provide alternative names for existing types
+//Useful to shorten long generic types
+//Keyword make code more readable and concise
+
+
+typealias UserId = String
+
+typealias StringMap = Map<String, String>
+
+typealias ClickHandler = (Int) -> Unit
+
+fun setClickHandler(handler: ClickHandler){
+    handler(5)
+}
+
+
+fun main () {
+val userId:UserId = "5"
+    val stringMap: StringMap = mapOf("1" to "one")
+    val clickHandler: ClickHandler = {
+        println("Handling click event")
+    }
+    setClickHandler(clickHandler)
+}
